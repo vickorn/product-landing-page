@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Assistant:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    min-height: 100%;
+    background-color: darkslateblue;
+}
+
+@media (max-width: 500px) {
+    body{
+        font-size: 1.1rem;
+    }
+
+    #video {
+        margin: 10px;
+        border-radius: 5px;
+        max-width:200px;
+        max-height:100px;
+    }
+}
+
+
+.grid-container > * {
+    padding: 20px;
+    text-align: center;
+}
+
+#header {
+    display: inline-block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+}
+
+#nav-bar {
+    display: grid;
+    position: fixed;
+    background-color:steelblue;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding: 0;    
+    width: 100%;
+    grid-template-areas:
+        "logo . list";
+}
+
+.logo {
+    margin-top: 20px;
+    grid-area: logo;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.nav__links {
+    margin: 50px 0 ;
+    font-size: 24px;
+    grid-area: list;
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    grid-area: main;
+}
+
+section {
+    margin: 100px 10px;
+    padding: 10px;
+}
+
+
+.footer {
+    grid-area: footer;
+    height: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"      
+        "main"      
+        "footer";
+}
+
+#product {
+    text-align: center;
+}
+
+#video {
+    margin: 50px;
+    border-radius: 5px;
+    width: 560px;
+    height: 315px;
+}
+
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    margin: 20px 0px 10px 0px;
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+#submit {
+    width: 100px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#submit:hover {
+    background-color: blanchedalmond;
+}
